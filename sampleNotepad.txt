@@ -1,0 +1,36 @@
+package CucumberTest.CucumberTest;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SampleTestCase {
+	
+	WebDriver driver;
+	
+	@BeforeTest
+	public void setup() {
+		WebDriverManager.chromedriver().setup();		
+		 driver = new ChromeDriver();
+	}
+	
+	
+	@Test
+	public void googleSearch() {
+		
+		
+		driver.get("https://www.google.com");
+	}
+
+
+	public void bingSearch(){
+
+		driver.get("https://www.bing.com");
+	}
+	
+	
+
+}
